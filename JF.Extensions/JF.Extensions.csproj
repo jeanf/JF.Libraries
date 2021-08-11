@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Jean FEVRE</Authors>
+    <Company>JanusCorp</Company>
+    <Product>Mes librairies</Product>
+    <Description>Ensemble de méthodes d'extension</Description>
+    <Copyright>(c) Jean FEVRE 2021</Copyright>
+    <PackageLicenseExpression />
+    <RootNamespace>JF</RootNamespace>
+  </PropertyGroup>
+
+</Project>

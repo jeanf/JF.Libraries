@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JF.Extensions", "JF.Extensions\JF.Extensions.csproj", "{1394468C-6137-4DF5-9428-8A0F45FA290F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librairies", "Librairies", "{4DAFE619-B784-4BE0-8705-955E53B3EDC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1394468C-6137-4DF5-9428-8A0F45FA290F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1394468C-6137-4DF5-9428-8A0F45FA290F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1394468C-6137-4DF5-9428-8A0F45FA290F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1394468C-6137-4DF5-9428-8A0F45FA290F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1394468C-6137-4DF5-9428-8A0F45FA290F} = {4DAFE619-B784-4BE0-8705-955E53B3EDC4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA4D94C0-E4FA-4DF2-A2D7-7070259A9866}
+	EndGlobalSection
+EndGlobal
