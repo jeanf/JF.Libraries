@@ -7,8 +7,11 @@
     <Product>Mes librairies</Product>
     <Description>Ensemble de méthodes d'extension</Description>
     <Copyright>(c) Jean FEVRE 2021</Copyright>
-    <PackageLicenseExpression />
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RootNamespace>JF</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/jeanf/JF.Libraries</RepositoryUrl>
+    <PackageReleaseNotes>JF, library, extension method</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
