@@ -320,26 +320,26 @@ namespace JF
 		/// </summary>
 		/// <param name="text">Le texte à hasher</param>
 		/// <returns></returns>
-		public static string MD5Hash(this string text)
-		{
-			MD5 md5 = new MD5CryptoServiceProvider();
+		//public static string MD5Hash(this string text)
+		//{
+		//	MD5 md5 = new MD5CryptoServiceProvider();
 
-			//compute hash from the bytes of text
-			md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+		//	//compute hash from the bytes of text
+		//	md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
 
-			//get hash result after compute it
-			byte[] result = md5.Hash;
+		//	//get hash result after compute it
+		//	byte[] result = md5.Hash;
 
-			StringBuilder strBuilder = new StringBuilder();
-			for (int i = 0; i < result.Length; i++)
-			{
-				//change it into 2 hexadecimal digits
-				//for each byte
-				strBuilder.Append(result[i].ToString("x2"));
-			}
+		//	StringBuilder strBuilder = new StringBuilder();
+		//	for (int i = 0; i < result.Length; i++)
+		//	{
+		//		//change it into 2 hexadecimal digits
+		//		//for each byte
+		//		strBuilder.Append(result[i].ToString("x2"));
+		//	}
 
-			return strBuilder.ToString();
-		}
+		//	return strBuilder.ToString();
+		//}
 		/// <summary>
 		/// 
 		/// </summary>
@@ -2516,20 +2516,20 @@ namespace JF
 		/// <typeparam name="T"></typeparam>
 		/// <param name="stream"></param>
 		/// <returns></returns>
-		public static T BinaryDeserialize<T>(this Stream stream)
-		{
-			return (T)new BinaryFormatter().Deserialize(stream);
-		}
+		//public static T BinaryDeserialize<T>(this Stream stream)
+		//{
+		//	return (T)new BinaryFormatter().Deserialize(stream);
+		//}
 		/// <summary>
 		/// 
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="stream"></param>
 		/// <param name="item"></param>
-		public static void BinarySerialize<T>(this Stream stream, T item)
-		{
-			new BinaryFormatter().Serialize(stream, item);
-		}
+		//public static void BinarySerialize<T>(this Stream stream, T item)
+		//{
+		//	new BinaryFormatter().Serialize(stream, item);
+		//}
 		/// <summary>
 		/// 
 		/// </summary>
