@@ -14,11 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet Key.txt = NuGet Key.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JF.RabbitMQ", "JF.RabbitMQ\JF.RabbitMQ.csproj", "{1584F7ED-3926-484C-BB1C-6FAE7A6BCDA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JF.RabbitMQ", "JF.RabbitMQ\JF.RabbitMQ.csproj", "{1584F7ED-3926-484C-BB1C-6FAE7A6BCDA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppSettings", "TestAppSettings\TestAppSettings.csproj", "{9AD88430-3767-4589-8689-77304AE289A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAppSettings", "TestAppSettings\TestAppSettings.csproj", "{9AD88430-3767-4589-8689-77304AE289A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{A2575BC6-D7A5-4912-A901-309ADEA3B012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JF.Test", "JF.Test\JF.Test.csproj", "{00F64F7F-A43A-4CDC-A756-E3426FD0DFBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{9AD88430-3767-4589-8689-77304AE289A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AD88430-3767-4589-8689-77304AE289A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AD88430-3767-4589-8689-77304AE289A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F64F7F-A43A-4CDC-A756-E3426FD0DFBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F64F7F-A43A-4CDC-A756-E3426FD0DFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F64F7F-A43A-4CDC-A756-E3426FD0DFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F64F7F-A43A-4CDC-A756-E3426FD0DFBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{0A8F3BC7-8B16-48DD-ADFD-4D26EB4AF61F} = {4DAFE619-B784-4BE0-8705-955E53B3EDC4}
 		{1584F7ED-3926-484C-BB1C-6FAE7A6BCDA6} = {4DAFE619-B784-4BE0-8705-955E53B3EDC4}
 		{9AD88430-3767-4589-8689-77304AE289A0} = {A2575BC6-D7A5-4912-A901-309ADEA3B012}
+		{00F64F7F-A43A-4CDC-A756-E3426FD0DFBA} = {4DAFE619-B784-4BE0-8705-955E53B3EDC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA4D94C0-E4FA-4DF2-A2D7-7070259A9866}

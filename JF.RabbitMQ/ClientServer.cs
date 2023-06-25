@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RabbitMQ.Client;
 using System.Xml.Linq;
+using Serilog;
 
 namespace JF.RabbitMQ
 {
@@ -17,7 +18,7 @@ namespace JF.RabbitMQ
 		#endregion
 
 		#region Variables privées
-		protected Logger logger = LogManager.GetCurrentClassLogger();
+		protected ILogger logger = Log.Logger;
 		#endregion
 
 		#region Propriétés publiques
@@ -117,7 +118,7 @@ namespace JF.RabbitMQ
 			if (result != null)
 			{
 				// Récupérer un élément dans la queue RabbitMQ 
-				byte[] body = result.Body;
+				byte[] body = result.Body.ToArray();
 				ulong tag = result.DeliveryTag;
 				if (body != null)
 				{
@@ -173,7 +174,7 @@ namespace JF.RabbitMQ
 		/// <param name="xmleater"></param>
 		public (Task task, CancellationTokenSource cts) StartReadXml(string rabbitin, Func<XElement, XElement> xmleater)
 		{
-			logger.Info($"Démarrage du service");
+			logger.Information($"Démarrage du service");
 			var count = 0;
 			var lastnotified = DateTime.Now;
 			var lastreceived = DateTime.Now;
@@ -211,7 +212,7 @@ namespace JF.RabbitMQ
 						{
 							if (count == 0)
 							{
-								logger.Info("Aucun document reçu depuis le lancement du service");
+								logger.Information("Aucun document reçu depuis le lancement du service");
 							}
 							else
 							{
@@ -219,7 +220,7 @@ namespace JF.RabbitMQ
 								var date = lastreceived.ToString("yyyy-MM-dd");
 								var heure = lastreceived.ToString("HH:mm:ss.fff");
 								var depuis = DateTime.Now.Subtract(lastreceived);
-								logger.Trace($"{count} document{pluriel} reçu{pluriel}. Dernier document reçu le {date} à {heure} ({depuis})");
+								logger.Debug($"{count} document{pluriel} reçu{pluriel}. Dernier document reçu le {date} à {heure} ({depuis})");
 							}
 							lastnotified = DateTime.Now;
 						}
@@ -237,7 +238,7 @@ namespace JF.RabbitMQ
 					s.Close();
 					s = null;
 				}
-				logger.Info("On quitte le thread consommateur");
+				logger.Information("On quitte le thread consommateur");
 			}, cts.Token);
 			return (task, cts);
 		}
@@ -248,7 +249,7 @@ namespace JF.RabbitMQ
 		/// <param name="cts"></param>
 		public void StopReadXml(Task task, CancellationTokenSource cts)
 		{
-			logger.Info($"Arrêt du service");
+			logger.Information($"Arrêt du service");
 			try
 			{
 				cts.Cancel();
@@ -263,7 +264,7 @@ namespace JF.RabbitMQ
 				cts = null;
 				task = null;
 			}
-			logger.Info($"Service arrêté");
+			logger.Information($"Service arrêté");
 		}
 		#endregion
 

@@ -4,12 +4,9 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Librairie JF d'accés àRabbitMQ</Title>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
     <PackageReference Include="Serilog" Version="3.0.1" />
   </ItemGroup>
 
