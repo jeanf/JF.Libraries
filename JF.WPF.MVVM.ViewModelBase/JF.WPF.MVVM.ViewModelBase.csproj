@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JF.WPF.MVVM.BindableObject\JF.WPF.MVVM.BindableObject.csproj" />
+    <ProjectReference Include="..\JF.WPF.MVVM.CommandSink\JF.WPF.MVVM.CommandSink.csproj" />
+  </ItemGroup>
+
+</Project>
