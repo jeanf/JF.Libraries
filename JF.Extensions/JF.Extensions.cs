@@ -377,6 +377,144 @@ namespace JF
 		{
 			return Regex.Replace(text, "[^0-9]", "");
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="text"></param>
+		/// <returns></returns>
+		public static string RemoveAccentOnUpperCase(this string text)
+		{
+			var ret = new StringBuilder();
+			foreach (char c in text)
+			{
+				switch (c)
+				{
+					case 'À': // 0192
+					case 'Á': // 0193
+					case 'Â': // 0194
+					case 'Ã': // 0195
+					case 'Ä': // 0196
+					case 'Å': // 0197
+					case 'Ā': // 0256
+					case 'Ă': // 0258
+					case 'Ą': // 0260
+						ret.Append('A');
+						break;
+					case 'Ç': // 0199
+					case 'Ć': // 0262
+					case 'Ĉ': // 0264
+					case 'Ċ': // 0266
+					case 'Č': // 0268
+						ret.Append('C');
+						break;
+					case 'Ď': // 0270
+					case 'Đ': // 0272
+						ret.Append('D');
+						break;
+					case 'È': // 
+					case 'É': // 
+					case 'Ê': // 
+					case 'Ë': // 
+					case 'Ē':
+					case 'Ĕ':
+					case 'Ė':
+					case 'Ę':
+					case 'Ě':
+						ret.Append('E');
+						break;
+					case 'Ġ':
+					case 'Ģ':
+					case 'Ğ':
+					case 'Ĝ':
+						ret.Append('G');
+						break;  // 			
+					case 'Ĥ':
+					case 'Ħ':
+						ret.Append('H');
+						break;
+					case 'Ì': // 
+					case 'Í': // 
+					case 'Î': // 
+					case 'Ï': // 
+					case 'İ':
+					case 'Ĩ':
+					case 'Ī':
+					case 'Ĭ':
+						ret.Append('I');
+						break;
+					case 'Ĵ':
+						ret.Append('J');
+						break;
+					case 'Ķ':
+						ret.Append('K');
+						break;
+					case 'Ŀ':
+					case 'Ľ':
+						ret.Append('L');
+						break;
+					case 'Ñ': // 
+					case 'Ŋ':
+						ret.Append('N');
+						break;
+					case 'Ò': // 
+					case 'Ó': // 
+					case 'Ô': // 
+					case 'Õ': // 
+					case 'Ö': // 
+					case 'Ő':
+					case 'Ō':
+					case 'Ŏ':
+						ret.Append('O');
+						break;
+					case 'Ŕ':
+					case 'Ŗ':
+					case 'Ř':
+						ret.Append('R');
+						break;
+					case 'Š':
+					case 'Ś':
+					case 'Ŝ':
+					case 'Ş':
+						ret.Append('S');
+						break;
+					case 'Ţ':
+					case 'Ť':
+					case 'Ŧ':
+					case 'Į':
+						ret.Append('T');
+						break;
+					case 'Ù': // 
+					case 'Ú': // 
+					case 'Û': // 
+					case 'Ü': // 
+					case 'Ų':
+					case 'Ű':
+					case 'Ĳ':
+					case 'Ũ':
+					case 'Ū':
+					case 'Ŭ':
+					case 'Ů':
+						ret.Append('U');
+						break;
+					case 'Ŵ':
+						ret.Append('W');
+						break;
+					case 'Ÿ':
+					case 'Ŷ':
+						ret.Append('Y');
+						break;
+					case 'Ź':
+					case 'Ż':
+					case 'Ž':
+						ret.Append('Z');
+						break;
+					default:
+						ret.Append(c);
+						break;
+				}
+			}
+			return ret.ToString();
+		}
 		#endregion
 		#region Sur tous les objets
 		/// <summary>
